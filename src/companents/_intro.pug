@@ -1,0 +1,11 @@
+section.section.intro
+      video(src="img/bg_itro.mp4" autoplay muted).intro__bg
+      .container.intro__container
+            h1.h1.intro__titel LevelUp
+            .content.intro__content
+                  img(src="img/prod.png", alt="картинка продукта").intro__img 
+                  .text
+                        h2.h3.intro__subtitle Характеристики
+                        ul.intro__list
+                              - for (var i = 0; i < 3; i++)
+                                    li.intro__item #{i+1} Lorem ipsum dolor sit amet, consectetur adipiscing elit.

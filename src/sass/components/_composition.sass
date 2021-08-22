@@ -1,0 +1,120 @@
+.composition
+    &__container
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        @include notebook
+            flex-direction: column
+
+    &__titel
+        width: 100%
+        text-align: center
+        flex-shrink: 0
+        margin-bottom: $margin/2
+
+    &__list
+        list-style-type: none
+        @include notebook
+            display: flex
+
+    &__item
+        position: relative
+        width: 150px
+        height: 150px
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $blue
+        z-index: 4
+        @include mobile
+            width: 50px
+            height: 50px
+
+        &::before
+            content: ""
+            width: 100%
+            height: 4px
+            background-color: $blue
+            position: absolute
+
+    &__list--left &__item
+        &:first-child::before
+            top: 70%
+            right: -100% 
+            transform: translateX(-10%) rotate(20deg)
+        &:nth-child(2n)::before
+            top: 50%
+            right: -100% 
+            transform: translate(-10%, -50%)
+        &:last-child::before
+            top: 26%
+            right: -100% 
+            transform: translateX(-10%) rotate(-20deg)
+        @include notebook
+            &:first-child::before
+                top: 100%
+                right: -50%
+                transform: translateX(-10%) rotate(20deg)
+            &:nth-child(2n)::before
+                top: 100%
+                right: 0
+                transform: translate(0%, 0%) rotate(90deg)
+            &:last-child::before
+                top: 100%
+                right: 0
+                transform: translateX(-50%) rotate(-20deg)
+        @include mobile
+            &:first-child::before
+                right: -85%
+            &:last-child::before
+                right: 25%
+
+    &__list--rigth &__item
+        &:first-child::before
+            top: 70%
+            left: -100% 
+            transform: translateX(10%) rotate(-20deg)
+        &:nth-child(2n)::before
+            top: 50%
+            left: -100% 
+            transform: translate(10%, -50%)
+        &:last-child::before
+            top: 35%
+            left: -100% 
+            transform: translateX(10%) rotate(20deg)
+        @include notebook
+            &:first-child::before
+                top: 0
+                left: 59% 
+            &:nth-child(2n)::before
+                top: 0
+                left: 0 
+                transform: translate(0%, 0%) rotate(90deg)
+            &:last-child::before
+                top: 0
+                left: -80%
+
+
+    &__item:not(:last-child)
+        margin-bottom: $margin/2   
+        @include notebook
+            margin-right: $margin/2   
+            margin-bottom: 0   
+        @include mobile
+            margin-right: 10px
+
+    &__ingr
+        width: 70%
+        z-index: 5
+
+    &__img 
+        max-height: 400px
+        height: 100vh
+        margin: 0 $margin
+        z-index: 5
+        @include notebook
+            margin: $margin/3 0
+        @include mobile
+            max-height: 250px

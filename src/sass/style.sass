@@ -1,0 +1,58 @@
+@import _root
+@import _breakpoint
+
+*, :before, :after
+      box-sizing: border-box
+      padding: 0
+      margin: 0
+      scroll-behavior: smooth
+
+body
+      font-family: 'Robot', sans-serif
+      font-weight: 400
+      font-size: 16px
+      line-height: 140%
+      color: $black
+      background-image: url(../img/patterns.png)
+
+.container 
+      position: relative
+      margin: 0 auto
+      padding: 0 $margin
+      max-width: 1400px
+      width: 100%
+      z-index: 10
+      @include notebook
+            padding: 0 $margin/2
+
+.h1 
+      font-size: (68/16)*1em
+      font-weight: 500
+      line-height: 140%
+
+.h2 
+      font-size: (42/16)*1em
+      font-weight: 500
+      line-height: 140%
+
+.h3 
+      font-size: (26/16)*1em
+      font-weight: 500
+      line-height: 140%
+
+.h4
+      font-size: 1em
+      font-weight: 500
+      line-height: 140%
+
+.section
+      margin-bottom: $margin*2
+      @include notebook
+            margin-bottom: $margin
+
+@import components/_modal
+@import components/_intro
+@import components/_composition
+@import components/_review
+@import components/_promo
+@import components/_form-order

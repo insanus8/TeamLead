@@ -1,0 +1,22 @@
+- 
+    var ingredients = [
+        {img: 'img/apple.png', alt:"яблоко"}, 
+        {img:'img/Apricot.png', alt:"абрикос"}, 
+        {img:'img/bananas.png', alt:"бананы"}, 
+        {img:'img/Blackberry.png', alt:"ежевика"}, 
+        {img:'img/Blueberries.png', alt:"черника"}, 
+        {img:'img/Strawberry.png', alt:"клубника"}
+        ]
+
+section.section.composition
+    .container.composition__container
+        h2.h2.composition__titel  Состав
+        ul.composition__list.composition__list--left
+            - for (var i = 0; i < 3; i++)
+                li.composition__item
+                    img(src=ingredients[i].img, alt=ingredients[i].alt).composition__ingr
+        img(src="img/prod.png", alt="картинка продукта").composition__img 
+        ul.composition__list.composition__list--rigth
+            - for (var i = 3; i < 6; i++)
+                li.composition__item
+                    img(src=ingredients[i].img, alt=ingredients[i].alt).composition__ingr

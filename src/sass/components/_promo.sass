@@ -1,0 +1,51 @@
+.promo 
+    &__content 
+        display: flex
+        @include notebook
+            align-items: center
+            flex-direction: column
+
+    &__img
+        max-height: 600px 
+        height: 100vh
+        @include desktop
+            max-height: 400px
+        @include notebook
+            max-height: 600px 
+        @include mobile
+            max-width: 100%
+            height: auto
+    
+    &__desc 
+        margin-top: $margin/4  
+        width: 50%
+        margin-left: $margin/2
+        @include notebook
+            width: 100%
+            margin-top: $margin/2
+            margin-left: 0
+    &__titel 
+        margin-bottom: $margin/4 
+        @include notebook
+            text-align: center
+
+    &__text:not(:last-child)
+        margin-bottom: $margin/4 
+
+    &__list
+        font-size: 1.2em
+        margin-top: $margin/2
+        width: 100% 
+        display: flex
+        justify-content: space-between
+        list-style-type: none
+        @include notebook
+            text-align: center
+            align-items: center
+            flex-direction: column
+    
+    &__item:not(:last-child)
+        margin-right: $margin/4  
+        @include notebook
+            margin-right: 0
+            margin-bottom: $margin/4        

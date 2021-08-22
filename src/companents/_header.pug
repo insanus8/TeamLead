@@ -1,0 +1,19 @@
+-
+      var links = [
+            {name:'Биография', url:'#'},
+            {name:'Произведения', url:'#'},
+            {name:'Экранизации', url:'#'},
+            {name:'Слова современников', url:'#'},
+      ]
+
+header.header
+      .container.header__container
+            nav.menu
+                  ul.menu__list
+                        each item in links
+                              li.menu__item
+                                    a.menu__link(href="#")= item.name
+            .language
+                  a.language__link.language__link--active(href="#") РУ
+                  span / 
+                  a.language__link(href="#") ENG

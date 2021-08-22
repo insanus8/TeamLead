@@ -1,0 +1,30 @@
+section.section.review
+    .container.review__container
+        h2.h2.review__titel  Отзывы
+        .review__slider
+            button.review__btn-slider.prev.diseble
+            button.review__btn-slider.next
+            .review__inner
+                .review__wrapp 
+                    -for (var i = 0; i < 3; i++)
+                        .review__card 
+                            .review__content 
+                                p.review__text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis pariatur obcaecati, libero explicabo quisquam hic excepturi eius eligendi placeat in est distinctio rem officia quia unde ipsum at provident illum.
+                            .review__character 
+                                .review__img
+                                    img(src="img/Ivan.jpg", alt="фото Ивана")
+                                h3.h4.review__name Иванов Иван Иванович
+                        .review__card 
+                            .review__content 
+                                p.review__text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis pariatur obcaecati, libero explicabo quisquam hic excepturi eius eligendi placeat in est distinctio rem officia quia unde ipsum at provident illum.
+                            .review__character
+                                .review__img
+                                    img(src="img/kait.jpg", alt="фото Кати")
+                                h3.h4.review__name Петрова Катя Ивановна
+                        .review__card 
+                            .review__content 
+                                p.review__text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis pariatur obcaecati, libero explicabo quisquam hic excepturi eius eligendi placeat in est distinctio rem officia quia unde ipsum at provident illum.
+                            .review__character
+                                .review__img
+                                    img(src="img/Sasha.jpg", alt="фото Саши")
+                                h3.h4.review__name Спилберг Саша Александровна

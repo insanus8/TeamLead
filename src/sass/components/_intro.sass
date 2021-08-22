@@ -1,0 +1,61 @@
+.intro
+    position: relative
+    width: 100%
+    color: $white
+
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba($black, .4)
+
+    &__bg
+        object-fit: cover
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+
+    &__container
+        padding: $margin*2 $margin
+        max-width: 800px
+        @include notebook
+            padding: $margin/2
+        
+    &__titel
+        text-align: center
+        width: 100%
+        margin-bottom: $margin/2
+
+    &__content
+        display: flex
+        justify-content: space-between
+        @include notebook
+            text-align: center
+            align-items: center
+            flex-direction: column
+
+    &__subtitle
+        margin-top: $margin/2
+        margin-bottom: $margin/3
+
+    &__list
+        list-style-type: none
+        
+    &__item:not(:last-child)
+        margin-bottom: $margin/4
+
+    &__img
+        max-height: 400px
+        height: 100vh
+        margin-right: $margin
+        @include notebook
+            margin-right: 0
+            margin-bottom: $margin/2
+        @include mobile
+            max-height: 250px

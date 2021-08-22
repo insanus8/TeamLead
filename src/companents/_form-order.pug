@@ -1,0 +1,22 @@
+section.section.form-order
+    .modal
+        .modal__content
+            .modal__text
+            button.modal__btn Ок
+    .container.form-order__container
+        h2.h2.form-order__titel LevelUp
+        h3.h3.form-order__time Скидка перестанет действовать через <span class="time">30</span> минут
+        .form-order__wrapp
+            .form-order__card
+                img(src="img/prod.png", alt="картинка продукта").form-order__img
+                ul.form-order__list
+                    li.form-order__price 333 руб.
+                    li.form-order__price.old--price 999 руб.
+            form(action="#").form-order__form
+                label.form-order__label
+                    input(type="text" placeholder="Ведите ваше имя" required).form-order__input.input-name
+                    span.form-order__desc Иван
+                label.form-order__label
+                    input(type="number" max="99999999999"  placeholder="Номер телефона" required).form-order__input.input-tel
+                    span.form-order__desc 79527370002
+                button(type="submit").form-order__btn Заказать
